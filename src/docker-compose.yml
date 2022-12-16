@@ -1,0 +1,13 @@
+version: '3.7'
+services:
+  mongodb:
+    image: 'mongo:latest'
+    container_name: 'mongodb'
+    volumes:
+      - ~/mongo_data3:/data/db
+    environment:
+      - MONGO_INITDB_DATABASE=copa
+      - MONGO_INITDB_ROOT_USERNAME=copa
+      - MONGO_INITDB_ROOT_PASSWORD=1234
+    ports:
+      - 27017:27017
